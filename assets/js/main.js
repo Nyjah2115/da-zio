@@ -428,6 +428,61 @@
     }
   });
 
+  /* ---------------- wideo w hero ---------------- */
+  /* Zdjęcie leży pod spodem jako pierwsza klatka i awaryjne tło. Wideo dociągamy
+     dopiero, gdy ma to sens, i zapętlamy przez przenikanie do zdjęcia — ostatnia
+     klatka różni się od pierwszej, więc twarde cięcie byłoby widoczne.
+     Gramy tylko wtedy, gdy hero jest na ekranie: poza kadrem przeglądarki i tak
+     wstrzymują wideo bez dźwięku, a przy okazji oszczędzamy baterię. */
+  (function wideoHero() {
+    const v = $('#heroVideo');
+    if (!v) return;
+
+    const ruchOff = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const siec = navigator.connection || {};
+    const wolne = typeof siec.effectiveType === 'string' && /(^|-)(2g|3g)$/.test(siec.effectiveType);
+    if (ruchOff || siec.saveData === true || wolne) { v.remove(); return; }
+
+    const maly = window.matchMedia && window.matchMedia('(max-width: 899px)').matches;
+    const zrodlo = (maly && v.dataset.srcMobile) ? v.dataset.srcMobile : v.dataset.src;
+    if (!zrodlo) { v.remove(); return; }
+
+    const PRZENIKANIE = 0.5; // sekundy — tyle samo co transition w CSS
+    let wKadrze = true;
+
+    const graj = () => {
+      if (!wKadrze || document.hidden || !v.isConnected) return;
+      const r = v.play();
+      if (r && r.catch) r.catch(() => {}); // Chrome sam wstrzymuje wideo bez dźwięku poza kadrem
+    };
+
+    v.addEventListener('canplay', () => { v.classList.add('is-on'); graj(); }, { once: true });
+    v.addEventListener('error', () => v.remove(), { once: true });
+
+    // wygaszamy tuż przed końcem, żeby skok pętli schował się pod zdjęciem
+    v.addEventListener('timeupdate', () => {
+      if (v.duration && v.duration - v.currentTime < PRZENIKANIE) v.classList.remove('is-on');
+    });
+    v.addEventListener('ended', () => {
+      v.currentTime = 0;
+      graj();
+      setTimeout(() => { if (wKadrze) v.classList.add('is-on'); }, 60);
+    });
+
+    v.preload = 'auto';
+    v.src = zrodlo;
+    graj();
+
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) graj(); });
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(wpisy => {
+        wKadrze = wpisy[0].isIntersecting;
+        if (wKadrze) graj(); else v.pause();
+      }, { threshold: 0 }).observe($('.hero'));
+    }
+  })();
+
   const nav = $('#nav');
   const przyScrollu = () => nav.classList.toggle('is-stuck', window.scrollY > 40);
   przyScrollu();
