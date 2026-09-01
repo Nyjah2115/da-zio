@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trattoria Pizzeria Da Zio — Mielec | Włoska pizza z pieca opalanego drewnem</title>
+<meta name="description" content="Włoska pizza z pieca opalanego drewnem, świeże makarony i domowe lemoniady. Mielec, ul. Wolności 258. Codziennie 12:00–22:00. Zamów online z dowozem lub na odbiór.">
+<meta name="theme-color" content="#14100E">
+<link rel="canonical" href="https://nyjah2115.github.io/trattoria-da-zio/">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Trattoria Pizzeria Da Zio — Mielec">
+<meta property="og:description" content="Włoska pizza z pieca opalanego drewnem. Mielec, ul. Wolności 258.">
+<meta property="og:image" content="assets/img/hero.jpg">
+<meta property="og:locale" content="pl_PL">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2314100E'/><text y='72' x='50' text-anchor='middle' font-size='58'>🍕</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#menu">Przejdź do menu</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Trattoria Pizzeria Da Zio — strona główna">
+      <span class="brand__flag" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand__txt"><small>Trattoria Pizzeria</small><strong>Da Zio</strong></span>
+    </a>
+    <nav class="nav__links" aria-label="Nawigacja główna">
+      <a href="#menu">Menu</a>
+      <a href="#zamow">Zamów</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#o-nas">O nas</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Otwórz koszyk">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12.1a1.6 1.6 0 0 0 1.6 1.3h8.4a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>
+      <span>Koszyk</span><b id="cartCount">0</b>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <picture>
+      <source media="(max-width:760px)" srcset="assets/img/hero-1200.jpg">
+      <img class="hero__img" src="assets/img/hero.jpg" alt="Pizzaiolo wsuwa pizzę na drewnianej łopacie do rozgrzanego pieca opalanego drewnem" fetchpriority="high">
+    </picture>
+    <div class="hero__veil"></div>
+    <div class="wrap hero__in">
+      <p class="hero__eyebrow">Mielec &middot; ul. Wolności 258</p>
+      <h1>Włoska pizza<br>z pieca opalanego drewnem</h1>
+      <p class="hero__lead">Ciasto, które rośnie 48 godzin. Mozzarella fior di latte. Trzy minuty w ogniu i&nbsp;jest na Twoim stole&nbsp;— albo pod Twoimi drzwiami.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#menu">Zamów online</a>
+        <a class="btn btn--ghost" href="tel:+48535626725">535 626 725</a>
+      </div>
+      <ul class="hero__facts">
+        <li><b>4,7</b><span>433 opinie w Google</span></li>
+        <li><b>#5</b><span>ze 213 restauracji w Mielcu</span></li>
+        <li><b>12–22</b><span>codziennie, 7 dni w tygodniu</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Najważniejsze informacje">
+    <div class="wrap strip__in">
+      <div><h3>Piec opalany drewnem</h3><p>Prawdziwy ogień, 400&nbsp;°C, trzy minuty. Stąd bierze się ta skórka.</p></div>
+      <div><h3>Dowóz i odbiór</h3><p>Zamów online, odbierz osobiście albo poczekaj na kuriera w&nbsp;Mielcu.</p></div>
+      <div><h3>Świeże makarony</h3><p>Carbonara na guanciale, tagliatelle z borowikami, duże porcje.</p></div>
+      <div><h3>Domowe lemoniady</h3><p>Wyciskane na miejscu. Do tego wino w&nbsp;karafce i&nbsp;prawdziwe tiramisu.</p></div>
+    </div>
+  </section>
+
+  <section id="menu" class="menu section">
+    <div class="wrap">
+      <header class="shead">
+        <p class="shead__kicker">Karta</p>
+        <h2>Menu</h2>
+        <p class="shead__lead">Klikaj w&nbsp;pozycje, żeby złożyć zamówienie&nbsp;— podsumowanie znajdziesz w&nbsp;koszyku.</p>
+      </header>
+
+      <div class="tabs" role="tablist" aria-label="Kategorie menu">
+        <button class="tab is-on" role="tab" aria-selected="true" data-tab="pizza">Pizza</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="makarony">Makarony</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="dodatki">Dodatki</button>
+      </div>
+
+      <div id="menuPanels"></div>
+    </div>
+  </section>
+
+  <section id="zamow" class="order section section--dark">
+    <div class="wrap order__in">
+      <header class="shead shead--light">
+        <p class="shead__kicker">Zamówienie</p>
+        <h2>Zamów online</h2>
+        <p class="shead__lead">Wybierz dania z&nbsp;menu, uzupełnij dane i&nbsp;wyślij. Oddzwaniamy z&nbsp;potwierdzeniem i&nbsp;czasem realizacji.</p>
+      </header>
+
+      <div class="order__grid">
+        <form class="form" id="orderForm" novalidate>
+          <fieldset class="form__group">
+            <legend>Sposób realizacji</legend>
+            <div class="radios">
+              <label class="radio"><input type="radio" name="tryb" value="dowoz" checked><span><b>Dowóz</b><small>Mielec i okolice</small></span></label>
+              <label class="radio"><input type="radio" name="tryb" value="odbior"><span><b>Odbiór osobisty</b><small>Wolności 258</small></span></label>
+            </div>
+          </fieldset>
+
+          <div class="form__row">
+            <label class="field"><span>Imię i nazwisko *</span><input type="text" name="imie" autocomplete="name" required></label>
+            <label class="field"><span>Telefon *</span><input type="tel" name="telefon" autocomplete="tel" inputmode="tel" required></label>
+          </div>
+
+          <div id="adresBlok">
+            <div class="form__row">
+              <label class="field field--wide"><span>Ulica i numer *</span><input type="text" name="ulica" autocomplete="street-address"></label>
+              <label class="field"><span>Miejscowość *</span><input type="text" name="miasto" value="Mielec" autocomplete="address-level2"></label>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <label class="field"><span>Na kiedy?</span>
+              <select name="godzina">
+                <option value="Jak najszybciej">Jak najszybciej</option>
+                <option value="Na konkretną godzinę">Na konkretną godzinę (wpisz w uwagach)</option>
+              </select>
+            </label>
+            <label class="field"><span>Płatność</span>
+              <select name="platnosc">
+                <option>Gotówka przy odbiorze</option>
+                <option>Karta przy odbiorze</option>
+                <option>BLIK przy odbiorze</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field field--full"><span>Uwagi do zamówienia</span><textarea name="uwagi" rows="3" placeholder="Np. bez cebuli, godzina 19:30, dzwonek nie działa…"></textarea></label>
+
+          <label class="check"><input type="checkbox" name="zgoda" required><span>Wyrażam zgodę na kontakt telefoniczny w&nbsp;sprawie tego zamówienia.</span></label>
+
+          <div class="form__actions">
+            <button type="submit" class="btn btn--primary btn--lg">Wyślij zamówienie</button>
+            <button type="button" class="btn btn--ghost-dark" id="copyBtn">Kopiuj treść</button>
+          </div>
+          <p class="form__note" id="formNote" role="status"></p>
+          <p class="form__fine">Zamówienie trafia do nas mailem. Jeśli spieszy Ci się bardziej&nbsp;— <a href="tel:+48535626725">zadzwoń: 535&nbsp;626&nbsp;725</a>.</p>
+        </form>
+
+        <aside class="summary" aria-label="Podsumowanie zamówienia">
+          <h3>Twoje zamówienie</h3>
+          <div id="summaryList" class="summary__list"></div>
+          <dl class="summary__totals" id="summaryTotals"></dl>
+          <p class="summary__hint" id="summaryHint"></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="section gallery">
+    <div class="wrap">
+      <header class="shead">
+        <p class="shead__kicker">Galeria</p>
+        <h2>U nas na miejscu</h2>
+        <p class="shead__lead">Piec, sala i&nbsp;to, co z&nbsp;niego wyjeżdża.</p>
+      </header>
+      <div class="grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <section id="o-nas" class="section about">
+    <div class="wrap about__in">
+      <div class="about__txt">
+        <p class="shead__kicker">O nas</p>
+        <h2>Kawałek Włoch przy&nbsp;Wolności</h2>
+        <p>Otworzyliśmy się w&nbsp;Mielcu 22&nbsp;kwietnia 2024&nbsp;roku z&nbsp;jednym pomysłem: pizza ma być robiona tak, jak we&nbsp;Włoszech. Piec opalany drewnem, ciasto wyrastające dwie doby, mozzarella fior di latte i&nbsp;składniki, których nie trzeba tłumaczyć.</p>
+        <p>Do tego świeże makarony — carbonara na guanciale i&nbsp;żółtkach, tagliatelle z&nbsp;borowikami, spaghetti z&nbsp;owocami morza. Domowe lemoniady, wino w&nbsp;karafce, tiramisu i&nbsp;panna cotta na koniec.</p>
+        <p>Sala jest niewielka i&nbsp;taka ma być: zielona krata na stołach, ceglana ściana, ogródek na lato. Przychodzą do nas rodziny z&nbsp;dziećmi, można z&nbsp;psem, a&nbsp;czasem gra u&nbsp;nas muzyka na żywo.</p>
+        <ul class="about__list">
+          <li>Ogródek i&nbsp;sala na miejscu</li>
+          <li>Menu dla dzieci i&nbsp;wysokie krzesełka</li>
+          <li>Przyjazne psom</li>
+          <li>Płatność kartą, parking pod lokalem</li>
+        </ul>
+      </div>
+      <div class="about__pics">
+        <img src="assets/img/gallery/piec-serce.jpg" alt="Pizza w kształcie serca w piecu opalanym drewnem" loading="lazy">
+        <img src="assets/img/gallery/wnetrze-3.jpg" alt="Sala restauracji ze ścianą z mchu i ceglaną kolumną" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews">
+    <div class="wrap">
+      <header class="shead">
+        <p class="shead__kicker">Opinie</p>
+        <h2>4,7 na 5 z&nbsp;433 opinii</h2>
+        <p class="shead__lead">Piąte miejsce wśród 213 restauracji w&nbsp;Mielcu.</p>
+      </header>
+      <div class="reviews__grid">
+        <blockquote class="review">
+          <div class="stars" aria-label="5 na 5">★★★★★</div>
+          <p>„Rewelacyjna pizza i&nbsp;świetna obsługa. Byłem pierwszy raz i&nbsp;na pewno nie ostatni. Gorąco polecam."</p>
+          <cite>Dariusz W. &middot; Google</cite>
+        </blockquote>
+        <blockquote class="review">
+          <div class="stars" aria-label="5 na 5">★★★★★</div>
+          <p>„Smaczne makarony, bardzo duże porcje. Delikatna panna cotta. Orzeźwiające lemoniady."</p>
+          <cite>Patrycja Z. &middot; Google</cite>
+        </blockquote>
+        <blockquote class="review">
+          <div class="stars" aria-label="5 na 5">★★★★★</div>
+          <p>„Pizza bardzo smaczna, świeże składniki i&nbsp;wszystko fajnie podane. Obsługa miła, a&nbsp;klimat miejsca sprzyja rodzinnemu przystankowi w&nbsp;podróży."</p>
+          <cite>Filip K. &middot; Google</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="section section--dark contact">
+    <div class="wrap contact__in">
+      <div class="contact__info">
+        <p class="shead__kicker">Kontakt</p>
+        <h2>Wpadnij albo zadzwoń</h2>
+        <dl class="contact__dl">
+          <div><dt>Adres</dt><dd>ul. Wolności 258<br>39-300 Mielec</dd></div>
+          <div><dt>Telefon</dt><dd><a href="tel:+48535626725">535 626 725</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:trattoriapizzeriadazio@gmail.com">trattoriapizzeriadazio@gmail.com</a></dd></div>
+          <div><dt>Godziny</dt><dd>poniedziałek – niedziela<br>12:00 – 22:00<br><small>Kuchnia (makarony) od 14:00, ostatnie zamówienia do 20:40.</small></dd></div>
+        </dl>
+        <div class="contact__cta">
+          <a class="btn btn--primary" href="tel:+48535626725">Zadzwoń</a>
+          <a class="btn btn--ghost-dark" href="https://www.google.com/maps/dir/?api=1&destination=Trattoria+Pizzeria+Da+Zio+Wolno%C5%9Bci+258+Mielec" target="_blank" rel="noopener">Wyznacz trasę</a>
+        </div>
+        <div class="contact__social">
+          <a href="https://www.facebook.com/p/Trattoria-Pizzeria-Da-Zio-61556460750592/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/trattoriapizzeriadazio/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="contact__map">
+        <iframe title="Mapa — Trattoria Pizzeria Da Zio, ul. Wolności 258, Mielec" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Trattoria%20Pizzeria%20Da%20Zio%2C%20Wolno%C5%9Bci%20258%2C%2039-300%20Mielec&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="brand brand--foot">
+      <span class="brand__flag" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand__txt"><small>Trattoria Pizzeria</small><strong>Da Zio</strong></span>
+    </div>
+    <p>ul. Wolności 258, 39-300 Mielec &middot; <a href="tel:+48535626725">535 626 725</a> &middot; codziennie 12:00–22:00</p>
+    <p class="foot__small">© <span id="year"></span> Trattoria Pizzeria Da Zio</p>
+  </div>
+</footer>
+
+<div class="bar" id="mobileBar">
+  <a class="bar__call" href="tel:+48535626725">Zadzwoń</a>
+  <button class="bar__order" id="barOrder">Koszyk <b id="barCount">0</b></button>
+</div>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer__scrim" data-close></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Koszyk">
+    <header class="drawer__head">
+      <h2>Koszyk</h2>
+      <button class="drawer__x" data-close aria-label="Zamknij koszyk">&times;</button>
+    </header>
+    <div class="drawer__body" id="cartList"></div>
+    <footer class="drawer__foot">
+      <dl class="summary__totals" id="cartTotals"></dl>
+      <a class="btn btn--primary btn--lg btn--block" href="#zamow" data-close>Przejdź do zamówienia</a>
+    </footer>
+  </aside>
+</div>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__x" aria-label="Zamknij">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" aria-label="Poprzednie">&#8249;</button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox__nav lightbox__nav--next" aria-label="Następne">&#8250;</button>
+</div>
+
+<script src="assets/js/menu-data.js"></script>
+<script src="assets/js/main.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Trattoria Pizzeria Da Zio",
+  "servesCuisine": ["Włoska", "Pizza"],
+  "priceRange": "$$",
+  "image": "assets/img/hero.jpg",
+  "telephone": "+48535626725",
+  "email": "trattoriapizzeriadazio@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Wolności 258",
+    "addressLocality": "Mielec",
+    "postalCode": "39-300",
+    "addressCountry": "PL"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "12:00",
+    "closes": "22:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "433"
+  },
+  "sameAs": [
+    "https://www.facebook.com/p/Trattoria-Pizzeria-Da-Zio-61556460750592/",
+    "https://www.instagram.com/trattoriapizzeriadazio/"
+  ]
+}
+</script>
+</body>
+</html>
